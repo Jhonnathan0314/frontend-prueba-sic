@@ -1,0 +1,30 @@
+<form [formGroup]="loginForm" class="surface-card w-10 m-auto shadow-4 py-5 grid justify-content-center align-items-start">
+  <div class="col-12 text-center">
+    <p class="text-2xl md:text-3xl text-color">¡Bienvenido de vuelta!</p>
+  </div>
+  <div class="col-12 my-3 flex justify-content-center">
+    <app-text-input
+      [value]="loginForm.value.identificationNumber"
+      label="Numero de identificación"
+      (valueEvent)="receiveValue('identificationNumber', $event)"
+      formControlName="identificationNumber"
+      ngDefaultControl
+    ></app-text-input>
+  </div>
+  <div class="col-12 my-3 flex justify-content-center">
+    <app-password-input
+      [value]="loginForm.value.password"
+      label="Contraseña"
+      [toggleMask]="true"
+      (valueEvent)="receiveValue('password', $event)"
+      formControlName="password"
+      ngDefaultControl
+    ></app-password-input>
+  </div>
+  <div class="col-12 h-3rem my-2 flex align-items-center justify-content-center">
+    <app-button label="Ingresar" (clickEvent)="validateForm()"></app-button>
+  </div>
+  <div class="col-12 text-center">
+    <a class="text-xs md:text-sm cursor-pointer text-color" routerLink="/security/register">Crear cuenta</a>
+  </div>
+</form>

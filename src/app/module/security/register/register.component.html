@@ -1,0 +1,98 @@
+<form [formGroup]="registerForm" class="surface-card w-6 m-auto shadow-4 py-5 grid justify-content-start align-items-start">
+    <div class="col-12 text-center">
+      <p class="text-2xl md:text-3xl text-color">¡Bienvenido!</p>
+    </div>
+    <div class="col-6 my-3 flex justify-content-center">
+      <app-dropdown
+        [options]="identificationTypes"
+        [selectedOption]="registerForm.value.identificationType"
+        label="Tipo de documento"
+        [showClear]="true"
+        [filter]="true"
+        (valueEvent)="receiveValue('identificationType', $event)"
+        formControlName="identificationType"
+        ngDefaultControl
+      ></app-dropdown>
+    </div>
+    <div class="col-6 my-3 flex justify-content-center">
+      <app-text-input
+        [value]="registerForm.value.identificationNumber"
+        label="Numero de identificación"
+        (valueEvent)="receiveValue('identificationNumber', $event)"
+        formControlName="identificationNumber"
+        ngDefaultControl
+      ></app-text-input>
+    </div>
+    <div class="col-6 my-3 flex justify-content-center">
+      <app-text-input
+        [value]="registerForm.value.name"
+        label="Nombre/s"
+        (valueEvent)="receiveValue('name', $event)"
+        formControlName="name"
+        ngDefaultControl
+      ></app-text-input>
+    </div>
+    <div class="col-6 my-3 flex justify-content-center">
+      <app-text-input
+        [value]="registerForm.value.lastname"
+        label="Apellido/s"
+        (valueEvent)="receiveValue('lastname', $event)"
+        formControlName="lastname"
+        ngDefaultControl
+      ></app-text-input>
+    </div>
+    <div class="col-6 my-3 flex justify-content-center">
+      <app-text-input
+        [value]="registerForm.value.phone"
+        label="Telefono"
+        (valueEvent)="receiveValue('phone', $event)"
+        formControlName="phone"
+        ngDefaultControl
+      ></app-text-input>
+    </div>
+    <div class="col-6 my-3 flex justify-content-center">
+      <app-text-input
+        [value]="registerForm.value.email"
+        label="Correo"
+        (valueEvent)="receiveValue('email', $event)"
+        formControlName="email"
+        ngDefaultControl
+      ></app-text-input>
+    </div>
+    <div class="col-6 my-3 flex justify-content-center">
+      <app-text-input
+        [value]="registerForm.value.address"
+        label="Dirección"
+        (valueEvent)="receiveValue('address', $event)"
+        formControlName="address"
+        ngDefaultControl
+      ></app-text-input>
+    </div>
+    <div class="col-6 my-3 flex justify-content-center">
+      <app-password-input
+        [value]="registerForm.value.password"
+        label="Contraseña"
+        [toggleMask]="true"
+        (valueEvent)="receiveValue('password', $event)"
+        formControlName="password"
+        ngDefaultControl
+      ></app-password-input>
+    </div>
+    <div class="col-6 my-3 flex justify-content-center">
+      <app-password-input
+        [value]="registerForm.value.confirmPassword"
+        label="Confirmar contraseña"
+        [toggleMask]="true"
+        (valueEvent)="receiveValue('confirmPassword', $event)"
+        formControlName="confirmPassword"
+        ngDefaultControl
+      ></app-password-input>
+    </div>
+    <div class="col-12 h-3rem my-2 flex align-items-center justify-content-center">
+      <app-button label="Crear" (clickEvent)="validateForm()"></app-button>
+    </div>
+    <div class="col-12 text-center">
+      <a class="text-xs md:text-sm cursor-pointer text-color" routerLink="/security/login">Ya tengo una cuenta</a>
+    </div>
+  </form>
+  
