@@ -19,7 +19,8 @@ export class LayoutComponent {
     this.items = [
       { label: 'Ver procesos', icon: 'pi pi-fw pi-search text-primary', command: () => { this.router.navigateByUrl('/dashboard/process/all') } },
       { label: 'Crear proceso', icon: 'pi pi-fw pi-plus text-primary', command: () => { this.router.navigateByUrl('/dashboard/process/create') } },
-      { label: 'Actualizar proceso', icon: 'pi pi-fw pi-pencil text-primary', command: () => { this.router.navigateByUrl('/dashboard/process/update') } },
+      { label: 'Ver personas', icon: 'pi pi-fw pi-pencil text-primary', command: () => { this.router.navigateByUrl('/dashboard/person/all') } },
+      { label: 'Ver empleados', icon: 'pi pi-fw pi-pencil text-primary', command: () => { this.router.navigateByUrl('/dashboard/employee/all') } },
     ]
   }
 
