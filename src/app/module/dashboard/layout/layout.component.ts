@@ -21,6 +21,7 @@ export class LayoutComponent {
       { label: 'Crear proceso', icon: 'pi pi-fw pi-plus text-primary', command: () => { this.router.navigateByUrl('/dashboard/process/create') } },
       { label: 'Ver personas', icon: 'pi pi-fw pi-pencil text-primary', command: () => { this.router.navigateByUrl('/dashboard/person/all') } },
       { label: 'Ver empleados', icon: 'pi pi-fw pi-pencil text-primary', command: () => { this.router.navigateByUrl('/dashboard/employee/all') } },
+      { label: 'Ver personas punto 3', icon: 'pi pi-fw pi-pencil text-primary', command: () => { this.router.navigateByUrl('/dashboard/consume') } },
     ]
   }
 

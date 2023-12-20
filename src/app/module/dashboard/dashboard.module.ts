@@ -9,12 +9,14 @@ import { RouterModule } from '@angular/router';
 import { ViewPeopleComponent } from './pages/people/view-people/view-people.component';
 import { ViewEmployeesComponent } from './pages/employees/view-employees/view-employees.component';
 import { TableModule } from 'primeng/table';
+import { ConsumeComponent } from './pages/consume/consume/consume.component';
 
 @NgModule({
   declarations: [
     LayoutComponent,
     ViewPeopleComponent,
-    ViewEmployeesComponent
+    ViewEmployeesComponent,
+    ConsumeComponent
   ],
   imports: [
     CommonModule,

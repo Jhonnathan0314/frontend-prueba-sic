@@ -10,6 +10,7 @@ export class ApiToken implements HttpInterceptor {
 
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         if(req.url.includes("auth")) return next.handle(req.clone());
+        if(req.url.includes("users")) return next.handle(req.clone());
         
         const token = this.sessionService.getToken();
 
