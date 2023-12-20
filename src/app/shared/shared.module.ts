@@ -12,13 +12,16 @@ import { PasswordModule } from 'primeng/password';
 import { ButtonModule } from 'primeng/button';
 import { ConfirmPopupModule } from 'primeng/confirmpopup';
 import { DropdownModule } from 'primeng/dropdown';
+import { YearInputComponent } from './components/year-input/year-input.component';
+import { CalendarModule } from 'primeng/calendar';
 
 @NgModule({
   declarations: [
     TextInputComponent,
     PasswordInputComponent,
     ButtonComponent,
-    DropdownComponent
+    DropdownComponent,
+    YearInputComponent
   ],
   imports: [
     CommonModule,
@@ -27,13 +30,15 @@ import { DropdownModule } from 'primeng/dropdown';
     PasswordModule,
     ButtonModule,
     ConfirmPopupModule,
-    DropdownModule
+    DropdownModule,
+    CalendarModule
   ],
   exports: [
     TextInputComponent,
     PasswordInputComponent,
     ButtonComponent,
-    DropdownComponent
+    DropdownComponent,
+    YearInputComponent
   ]
 })
 export class SharedModule { }

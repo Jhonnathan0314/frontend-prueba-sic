@@ -1,3 +1,13 @@
+export class Person {
+    identificationNumber: number;
+    identificationType: string;
+    name: string;
+    lastname: string;
+    phone: number;
+    address: string;
+    email: string;
+}
+
 export class PersonLogin {
     identificationNumber: number;
     password: string;

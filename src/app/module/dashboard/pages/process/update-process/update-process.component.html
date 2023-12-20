@@ -1,0 +1,54 @@
+<form [formGroup]="processForm" class="surface-card w-6 m-auto shadow-4 py-5 grid justify-content-start align-items-start">
+    <div class="col-12 text-center">
+      <p class="text-2xl md:text-3xl text-color">¡Bienvenido!</p>
+    </div>
+    <div class="col-6 my-3 flex justify-content-center">
+      <app-text-input
+        [value]="processForm.value.filingYear"
+        label="Año de radicación"
+        (valueEvent)="receiveValue('filingYear', $event)"
+        formControlName="filingYear"
+        ngDefaultControl
+      ></app-text-input>
+    </div>
+    <div class="col-6 my-3 flex justify-content-center">
+      <app-text-input
+        [value]="processForm.value.processName"
+        label="Nombre del trámite"
+        (valueEvent)="receiveValue('processName', $event)"
+        formControlName="processName"
+        ngDefaultControl
+      ></app-text-input>
+    </div>
+    <div class="col-6 my-3 flex justify-content-center">
+      <app-text-input
+        [value]="processForm.value.description"
+        label="Desripción"
+        (valueEvent)="receiveValue('description', $event)"
+        formControlName="description"
+        ngDefaultControl
+      ></app-text-input>
+    </div>
+    <div class="col-6 my-3 flex justify-content-center">
+      <app-text-input
+        [value]="processForm.value.filingPerson"
+        label="Persona que radica"
+        (valueEvent)="receiveValue('filingPerson', $event)"
+        formControlName="filingPerson"
+        ngDefaultControl
+      ></app-text-input>
+    </div>
+    <div class="col-6 my-3 flex justify-content-center">
+      <app-text-input
+        [value]="processForm.value.officialReceived"
+        label="Funcionario que recibió"
+        (valueEvent)="receiveValue('officialReceived', $event)"
+        formControlName="officialReceived"
+        ngDefaultControl
+      ></app-text-input>
+    </div>
+    <div class="col-12 h-3rem my-2 flex align-items-center justify-content-center">
+      <app-button label="Crear" (clickEvent)="validateForm()"></app-button>
+    </div>
+  </form>
+  

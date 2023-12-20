@@ -1,1 +1,8 @@
-<p>layout works!</p>
+<section class="w-full h-screen">
+  <header>
+    <p-menubar [model]="items"></p-menubar>
+  </header>
+  <section class="w-full h-fit flex justify-content-center align-items-center">
+    <router-outlet></router-outlet>
+  </section>
+</section>

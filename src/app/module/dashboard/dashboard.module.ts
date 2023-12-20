@@ -3,7 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { LayoutComponent } from './layout/layout.component';
-
+import { SharedModule } from 'src/app/shared/shared.module';
+import { MenubarModule } from 'primeng/menubar';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -11,7 +13,10 @@ import { LayoutComponent } from './layout/layout.component';
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    SharedModule,
+    MenubarModule,
+    RouterModule
   ]
 })
 export class DashboardModule { }

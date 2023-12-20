@@ -3,8 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
 
 const routes: Routes = [
-  { path: '', component: LayoutComponent },
-  { path: '**', redirectTo: '', pathMatch: 'full' }
+  { path: '', component: LayoutComponent, children: 
+    [
+      { path: 'process', loadChildren: () => import('./pages/process/process.module').then(m => m.ProcessModule) },
+    ] 
+  },
+  { path: '**', redirectTo: 'process', pathMatch: 'full' }
 ];
 
 @NgModule({

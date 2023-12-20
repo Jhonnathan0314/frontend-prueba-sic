@@ -31,7 +31,7 @@ export class SessionService {
 
   validateSession() {
     if (this.isLogged()) {
-      this.redirect('/dashboard');
+      this.redirect('/dashboard/process');
     } else {
       this.logout();
     }
